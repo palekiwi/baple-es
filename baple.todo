@@ -4,11 +4,11 @@ Plugins
   [ ] csv
   [ ] styled-components
   [ ] sharp
+  [ ] typography
   [X] typescript
     [X] compiler config
     [X] covert components
 Modules
-  [ ] typography
   [ ] gatsby-image
   [ ] browser-locale
 Components
