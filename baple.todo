@@ -1,0 +1,18 @@
+
+Plugins
+  [ ] filesystem
+  [ ] csv
+  [ ] styled-components
+  [ ] sharp
+  [X] typescript
+    [X] compiler config
+    [X] covert components
+Modules
+  [ ] typography
+  [ ] gatsby-image
+  [ ] browser-locale
+Components
+  [ ] layout
+  [ ] header
+  [ ] footer
+  [ ] landing page
