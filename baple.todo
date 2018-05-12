@@ -1,18 +1,19 @@
-
-Plugins
-  [ ] filesystem
-  [ ] csv
-  [ ] styled-components
-  [ ] sharp
-  [X] typescript
-    [X] compiler config
-    [X] covert components
-  [X] typography
 Modules
-  [ ] gatsby-image
   [ ] browser-locale
+  [ ] font awesome
+  [X] gatsby-image
 Components
   [ ] layout
   [ ] header
   [ ] footer
   [ ] landing page
+Setup
+  [ ] scripts
+  [ ] gh-pages
+Plugins
+  [X] typescript
+  [X] typography
+  [X] styled-components
+  [X] csv
+  [X] sharp
+  [X] filesystem
