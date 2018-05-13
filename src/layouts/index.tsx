@@ -5,12 +5,16 @@ import { getLocale, saveLocale } from '../utils/locale';
 import LayoutRoot from '../components/LayoutRoot';
 import LayoutMain from '../components/LayoutMain';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const initialState = {lang: ''};
 type State = typeof initialState;
 
 interface Props {
-  children: () => any
+  children: any
+  location: {
+    pathname: string
+  }
   data: {
     site: {
       siteMetadata: {
@@ -33,7 +37,7 @@ class Layout extends React.Component<Props, State> {
   }
 
   render () {
-    const {data, children} = this.props;
+    const {data, location, children} = this.props;
 
     return (
       <LayoutRoot>
@@ -46,8 +50,9 @@ class Layout extends React.Component<Props, State> {
         />
         <Header siteTitle={data.site.siteMetadata.title} />
         <LayoutMain>
-          {children()}
+          {children({...this.props, ...this.state})}
         </LayoutMain>
+        {location.pathname !== '/' && <Footer />}
       </LayoutRoot>
     )
   }

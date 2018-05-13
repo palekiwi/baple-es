@@ -1,9 +1,6 @@
 import * as Typography from 'typography';
+import noriega from 'typography-theme-noriega';
 
-const theme = {
-  baseFontSize: '18px'
-};
-
-const typography = new Typography(theme);
+const typography = new Typography(noriega);
 
 export default typography;

@@ -1,7 +1,7 @@
 Modules
-  [ ] browser-locale
   [ ] font awesome
   [X] gatsby-image
+  [X] browser-locale
 Components
   [ ] layout
   [ ] header
