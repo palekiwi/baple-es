@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Helmet from 'react-helmet';
-import styled from 'styled-components'
 
-import Header from '../components/header';
+import Header from '../components/Header';
+import Container from '../components/Container';
 
 interface Props {
   children: () => any
@@ -15,20 +15,13 @@ interface Props {
   }
 }
 
-const Container = styled.div`
-  margin: 0 auto;
-  max-width: 960;
-  padding: 0px 1.0875rem 1.45rem;
-  padding-top: 0;
-`
-
 const Layout: React.SFC<Props> = ({ children, data }) => (
   <div>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Baple Group' },
+        { name: 'keywords', content: 'baple, consulting' },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
