@@ -2,8 +2,9 @@ import * as React from 'react';
 import Helmet from 'react-helmet';
 import { getLocale, saveLocale } from '../utils/locale';
 
+import LayoutRoot from '../components/LayoutRoot';
+import LayoutMain from '../components/LayoutMain';
 import Header from '../components/Header';
-import Container from '../components/Container';
 
 const initialState = {lang: ''};
 type State = typeof initialState;
@@ -35,7 +36,7 @@ class Layout extends React.Component<Props, State> {
     const {data, children} = this.props;
 
     return (
-      <div>
+      <LayoutRoot>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -44,11 +45,10 @@ class Layout extends React.Component<Props, State> {
           ]}
         />
         <Header siteTitle={data.site.siteMetadata.title} />
-        <p>lang: {this.state.lang}</p>
-        <button onClick={() => this.setLang('en')}>en</button>
-        <button onClick={() => this.setLang('zh')}>cn</button>
-        {children()}
-      </div>
+        <LayoutMain>
+          {children()}
+        </LayoutMain>
+      </LayoutRoot>
     )
   }
 }
